@@ -6,9 +6,9 @@ body {
     url("assets/images/pattern-lines.svg"),
     url("assets/images/background-mobile.png");
 
-  background-position: top 1% right 5%, bottom 0% left 0%, center, center;
+  background-position: top 2% right 5%, bottom 0% left 0%, center, center;
 
-  background-size: 5rem, 15rem, cover, cover;
+  background-size: 10rem, 12rem, cover, cover;
   background-repeat: no-repeat;
   color: hsl(0, 0%, 100%);
 }
@@ -74,6 +74,18 @@ photo-info p {
 }
 .photo-conf p {
   font-size: 0.75rem;
+}
+
+.ticket {
+  display: none;
+  text-align: center;
+  padding: 0.5rem;
+}
+.ticket h1 {
+  font-size: 2rem;
+}
+.ticket p {
+  font-size: 1.2rem;
 }
 
 .attribution {

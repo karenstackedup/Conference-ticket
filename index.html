@@ -22,15 +22,13 @@
     <main>
       <section class="intro">
         <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" />
-        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-        <p>Secure your spot at next year's biggest coding conference.</p>
+        <h1 id="headIntro">Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p id="headDesc">Secure your spot at next year's biggest coding conference.</p>
       </section>
 
-      <form
-        action="/generateTicket
-    "
+      <form action="/generateTicket"
         id="ticketForm"
-        method="post"
+        method="POST"
         enctype="multipart/form-data"
       >
        
@@ -63,8 +61,7 @@
         
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required />
-       
-      
+          
           <label for="email">Email Address</label>
           <input
             type="email"
@@ -72,8 +69,6 @@
             name="email"
             placeholder="example@email.com"
           />
-        
-
        
           <label for="username">GitHub Username</label>
           <input
@@ -88,12 +83,13 @@
       </form>
 
       <section class="ticket">
-        <img src="assets/images/logo-full.svg" alt="Logo" />
-        <h1>
-          Congrats, {name}! Your ticket is ready. We've emailed your ticket
-          to {email} and will send updates in the run up to the event.
-          Coding Conf Jan 31, 2025 / Austin, TX
-        </h1>
+        <div class="ticket-wrapper">
+          <img src="assets/images/logo-full.svg" alt="Logo" />
+           <h1></h1>
+           <p></p>
+          <div class="ticket-overlay">
+          </div>
+        </div>
       </section>
     </main>
 
@@ -102,23 +98,6 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="https://github.com/karenstackedup">karenstackedup</a>.
     </div>
-
-    <script>
-      document
-        .getElementById("ticketForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-
-          document.querySelector(
-            ".ticket h1"
-          ).innerText = `Congrats, ${name}! Your ticket is ready. We've emailed your ticket to ${email} and will send updates in the run up to the event. Coding Conf Jan 31, 2025 / Austin, TX`;
-
-          document.querySelector("form").style.display = "none";
-          document.querySelector(".ticket").style.display = "block";
-        });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
