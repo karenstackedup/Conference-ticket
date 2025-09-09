@@ -1,0 +1,85 @@
+body {
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  background-image: url("assets/images/pattern-squiggly-line-top.svg"),
+    url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("assets/images/pattern-lines.svg"),
+    url("assets/images/background-mobile.png");
+
+  background-position: top 1% right 5%, bottom 0% left 0%, center, center;
+
+  background-size: 5rem, 15rem, cover, cover;
+  background-repeat: no-repeat;
+  color: hsl(0, 0%, 100%);
+}
+
+main {
+  padding: 1rem;
+}
+
+.intro {
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 100%;
+}
+
+main p,
+main ::placeholder,
+main label {
+  font-size: 0.75rem;
+}
+main p,
+::placeholder,
+input {
+  color: hsl(252, 6%, 83%);
+}
+
+input {
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  border: 1px solid hsl(252, 6%, 83%);
+  border-radius: 0.5rem;
+}
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0;
+  background: hsl(7, 88%, 67%);
+  width: 100%;
+  color: hsl(248, 19%, 35%);
+  font-weight: 700;
+}
+.photo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed hsl(252, 6%, 83%);
+  border-radius: 0.75rem;
+  max-width: 100%;
+  padding: 1.25rem;
+}
+
+photo-info p {
+  font-size: 0.9rem;
+  color: hsl(252, 6%, 83%);
+}
+.photo-conf {
+  display: flex;
+  gap: 0.35rem;
+}
+.photo-conf p {
+  font-size: 0.75rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
