@@ -23,10 +23,8 @@
     <main>
       <section class="intro">
         <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" />
-        <h1 id="headIntro">Your Journey to Coding Conf 2025 Starts Here!</h1>
-        <p id="headDesc">
-          Secure your spot at next year's biggest coding conference.
-        </p>
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
       </section>
 
       <form
@@ -51,7 +49,7 @@
             required
           />
 
-          <p>Drag and drop or click to upload</p>
+          <p class="dragDrop">Drag and drop or click to upload</p>
         </div>
 
         <div class="photo-conf">
@@ -90,17 +88,33 @@
           <p></p>
 
           <div id="ticket-overlay">
-            <img
-              src="assets/images/pattern-ticket.svg"
-              alt="Ticket background"
-              class="ticket-bg"
-            />
-
             <div class="ticket-content">
-              <img id="avatarPreview" alt="User Photo" />
-              <img id="logoPreview" src="assets/images/logo-full.svg" alt="" />
-              <p id="attendeeName"></p>
-              <p id="githubUsername"></p>
+              <!-- Top Row: Logo + Date -->
+              <div class="ticket-header">
+                <img
+                  id="logoPreview"
+                  src="assets/images/logo-full.svg"
+                  alt="Coding Conf Logo"
+                />
+                <p id="attendeeDate">Jan 31, 2025 / Austin, TX</p>
+              </div>
+
+              <!-- Middle Row: Avatar + Name + GitHub -->
+              <div class="ticket-body">
+                <img id="avatarPreview" alt="User Photo" />
+                <div class="attendee-info">
+                  <p id="attendeeName"></p>
+                  <div class="github-info">
+                    <img
+                      src="assets/images/icon-github.svg"
+                      alt="GitHub icon"
+                    />
+                    <p id="githubUsername"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Ticket Number -->
               <p id="ticketNumber"></p>
             </div>
           </div>

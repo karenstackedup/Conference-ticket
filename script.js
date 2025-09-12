@@ -23,7 +23,7 @@ document.getElementById("ticketForm").addEventListener("submit", function (e) {
 
   document.getElementById("attendeeName").innerText = name;
   document.getElementById("githubUsername").innerText = `@${username}`;
-  document.getElementById("ticketNumber").innerText = "#009"; // You can randomize this later
+  document.getElementById("ticketNumber").innerText = "#01609"; // You can randomize this later
 
   if (photo) {
     const avatar = document.getElementById("avatarPreview");
