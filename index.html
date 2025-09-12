@@ -11,9 +11,10 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
       rel="stylesheet"
-      href="https://fonts.google.com/specimen/Inconsolata"
     />
+
     <link rel="stylesheet" href="styles.css" />
 
     <title>Frontend Mentor | Conference ticket generator</title>
@@ -23,61 +24,60 @@
       <section class="intro">
         <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" />
         <h1 id="headIntro">Your Journey to Coding Conf 2025 Starts Here!</h1>
-        <p id="headDesc">Secure your spot at next year's biggest coding conference.</p>
+        <p id="headDesc">
+          Secure your spot at next year's biggest coding conference.
+        </p>
       </section>
 
-      <form action="/generateTicket"
+      <form
+        action="/generateTicket"
         id="ticketForm"
         method="POST"
         enctype="multipart/form-data"
       >
-       
-          <label for="photo">Upload Avatar</label>
-          <div class="photo-info">
-            <label for="imageUpload">
-               <img
+        <label for="photo">Upload Avatar</label>
+        <div class="photo-info">
+          <label for="imageUpload">
+            <img
               src="assets/images/icon-upload.svg"
               alt="Upload image button"
             />
-            </label>
-            <input type="file"
-              id="imageUpload"
-              name="imageUpload"
-              accept="image/png, image/jpeg"
-              style="display: none; cursor:pointer"
-              required />
-           
-            <p>Drag and drop or click to upload</p>
-          </div>
+          </label>
+          <input
+            type="file"
+            id="imageUpload"
+            name="imageUpload"
+            accept="image/png, image/jpeg"
+            required
+          />
 
-          <div class="photo-conf">
-            <label for="photo-input"></label>
-            <img src="assets/images/icon-info.svg" alt="Icon info" />
-            <p>
-              Upload your photo (JPG or PNG, max size: 500KB).
-            </p>
-          </div>
-        
-        
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required />
-          
-          <label for="email">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@email.com"
-          />
-       
-          <label for="username">GitHub Username</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder=" @yourusername"
-          />
-        </>
+          <p>Drag and drop or click to upload</p>
+        </div>
+
+        <div class="photo-conf">
+          <label for="photo-input"></label>
+          <img src="assets/images/icon-info.svg" alt="Icon info" />
+          <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+        </div>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com"
+        />
+
+        <label for="username">GitHub Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder=" @yourusername"
+        />
 
         <button type="submit">Generate My Ticket</button>
       </form>
@@ -85,9 +85,24 @@
       <section class="ticket">
         <div class="ticket-wrapper">
           <img src="assets/images/logo-full.svg" alt="Logo" />
-           <h1></h1>
-           <p></p>
-          <div class="ticket-overlay">
+
+          <h1></h1>
+          <p></p>
+
+          <div id="ticket-overlay">
+            <img
+              src="assets/images/pattern-ticket.svg"
+              alt="Ticket background"
+              class="ticket-bg"
+            />
+
+            <div class="ticket-content">
+              <img id="avatarPreview" alt="User Photo" />
+              <img id="logoPreview" src="assets/images/logo-full.svg" alt="" />
+              <p id="attendeeName"></p>
+              <p id="githubUsername"></p>
+              <p id="ticketNumber"></p>
+            </div>
           </div>
         </div>
       </section>

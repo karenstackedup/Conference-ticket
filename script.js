@@ -6,7 +6,9 @@ document.getElementById("ticketForm").addEventListener("submit", function (e) {
   const username = document.getElementById("username").value;
   const photo = document.getElementById("imageUpload").files[0];
 
-  document.querySelector("form").style.display = "none";
+  // const previewContainer = document.getElementById("ticket-overlay");
+
+  document.getElementById("ticketForm").style.display = "none";
   document.querySelector(".intro").style.display = "none";
   document.querySelector(".ticket").style.display = "block";
 
@@ -18,4 +20,14 @@ document.getElementById("ticketForm").addEventListener("submit", function (e) {
     ".ticket p"
   ).innerText = ` We've emailed your ticket to ${email} and will send updates
      in the run up to the event.`;
+
+  document.getElementById("attendeeName").innerText = name;
+  document.getElementById("githubUsername").innerText = `@${username}`;
+  document.getElementById("ticketNumber").innerText = "#009"; // You can randomize this later
+
+  if (photo) {
+    const avatar = document.getElementById("avatarPreview");
+    avatar.src = URL.createObjectURL(photo);
+    avatar.onload = () => URL.revokeObjectURL(avatar.src); // free memory
+  }
 });
